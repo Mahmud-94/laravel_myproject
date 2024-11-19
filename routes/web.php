@@ -3,24 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-
-Route::get('/admin/dashboard', function () {
-    return view('backend.admin_dashboard');
 });
 
 Route::get('/dashboard', function () {
@@ -33,4 +19,40 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// admin route
+Route::middleware('guest:admin')->prefix('admin')->group( function () {
+
+    Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'login'])->name('admin.login');
+    Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'check_user']);
+
+});
+
+Route::middleware('auth:admin')->prefix('admin')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'logout'])->name('admin.logout');
+
+    Route::view('/dashboard','backend.admin_dashboard');
+
+});
+
+
+// agent route
+Route::middleware('guest:agent')->prefix('agent')->group( function () {
+
+    Route::get('login', [App\Http\Controllers\Auth\Agent\LoginController::class, 'login'])->name('agent.login');
+    Route::post('login', [App\Http\Controllers\Auth\Agent\LoginController::class, 'check_user']);
+
+});
+
+Route::middleware('auth:agent')->prefix('agent')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Agent\LoginController::class, 'logout'])->name('agent.logout');
+
+    Route::view('/dashboard','backend.agent_dashboard');
+
+});
+
 require __DIR__.'/auth.php';
+
+
+

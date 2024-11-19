@@ -9,8 +9,8 @@
 	<meta name="author" content="hencework"/>
 
     @include ('backend.layouts.css');
-	
-	
+
+
 </head>
 
 <body>
@@ -21,18 +21,43 @@
 	<!-- /Preloader -->
     <div class="wrapper theme-1-active pimary-color-gold">
 		<!-- Top Menu Items -->
-        @include ('backend.layouts.topmenu');
+
+
+
+        @if (Auth()->guard('admin')->check())
+			@include ('backend.layouts.topmenu')
+
+			@elseif(Auth()->guard('agent')->check())
+			@include ('backend.layouts.agent_topmenu')
+
+			@endif
+
+
+
+
+
+
 		<!-- /Top Menu Items -->
-		
+
 		<!-- Left Sidebar Menu -->
-        @include ('backend.layouts.left_sidebar');
+
+        @if (Auth()->guard('admin')->check())
+			@include ('backend.layouts.left_sidebar')
+
+			@elseif(Auth()->guard('agent')->check())
+			@include ('backend.layouts.agent_left_sidebar')
+
+			@endif
+
+
+
 		<!-- /Left Sidebar Menu -->
-		
+
 		<!-- Right Sidebar Menu -->
         @include ('backend.layouts.right_sidebar');
 		<!-- /Right Sidebar Menu -->
-		
-		
+
+
 
         <!-- Main Content -->
 		@yield('content')
@@ -44,9 +69,9 @@
 
     </div>
     <!-- /#wrapper -->
-	
+
 	<!-- JavaScript -->
-	
+
     @include ('backend.layouts.js');
 </body>
 
