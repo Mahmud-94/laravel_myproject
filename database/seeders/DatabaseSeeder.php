@@ -23,17 +23,17 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // \App\Models\Admin::create([
+        \App\Models\Admin::create([
+            'name' => 'mahmud',
+            'email' => 'mahmud@gmail.com',
+            'password' => Hash::make('mahmud123'),
+        ]);
+
+
+        // \App\Models\Agent::create([
         //     'name' => 'HASSAN',
         //     'email' => 'hassan@gmail.com',
         //     'password' => Hash::make('hassan123'),
         // ]);
-
-
-        \App\Models\Agent::create([
-            'name' => 'HASSAN',
-            'email' => 'hassan@gmail.com',
-            'password' => Hash::make('hassan123'),
-        ]);
     }
 }

@@ -300,10 +300,10 @@
 							</li>
 							<li class="divider"></li>
 							<li>
-                            <form action="{{route('admin.logout')}}" method="post">
+                            <form action="{{route('agent.logout')}}" method="post">
 									@csrf
 
-									<button type="submit" class="btn btn-sm btn-danger "> <i class="fa fa-fw fa-power-off"></i>Admin Log out</button>
+									<button type="submit" class="btn btn-sm btn-danger "> <i class="fa fa-fw fa-power-off"></i>Agent Log out</button>
 
 								</form>
 							</li>
