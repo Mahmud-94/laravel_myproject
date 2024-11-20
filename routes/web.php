@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\backend\ExpertController;
 use App\Http\Controllers\backend\SpecialistController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Expert;
 use Illuminate\Support\Facades\Route;
 
 
@@ -34,6 +36,7 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
     Route::view('/dashboard','backend.admin_dashboard');
     Route::resource('/specialist',SpecialistController::class);
+    Route::resource('/expert',ExpertController::class);
 
 });
 

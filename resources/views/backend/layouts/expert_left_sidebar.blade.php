@@ -23,13 +23,13 @@
 
 
 				<li>
-					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Admin</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Experts</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
 					<ul id="ecom_dr" class="collapse collapse-level-1">
 						<li>
-							<a href="{{route('specialist.index')}}">All Admin</a>
+							<a href="{{route('expert.index')}}">All Experts</a>
 						</li>
 						<li>
-							<a href="product.html">New Admin</a>
+							<a href="product.html">New Experts</a>
 						</li>
 
 
