@@ -36,55 +36,6 @@
 
     <!-- Row -->
 
-    <div class="row">
-
-						<div class="col-md-8">
-							<div class="panel panel-default card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<h6 class="panel-title txt-dark">New Experts</h6>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body">
-										<div class="row">
-											<div class="col-sm-12 col-xs-12">
-												<div class="form-wrap">
-                                                <form class="form-horizontal" method="post" action="{{route('expert.update', $expert->id)}}">
-                                                        @csrf
-                                                        @method('PUT')
-
-														<div class="form-group">
-															<label class="control-label mb-10" for="exampleInputuname_2">Experts*</label>
-															<div class="input-group">
-																<input type="text" class="form-control" name="expert"  value="{{($expert->name)}}" id="exampleInputuname_2" placeholder="Username">
-																<div class="input-group-addon"><i class="icon-user"></i></div>
-															</div>
-														</div>
-														<div class="form-group">
-															<label class="control-label mb-10" for="exampleInputEmail_2">Details*</label>
-															<div class="input-group">
-                                                            <textarea type="text" name="details" class="form-control" id="exampleInputEmail_2" placeholder="Enter your Details" rows="10">{{($expert->details)}}</textarea>
-																<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
-															</div>
-														</div>
-
-
-														<div class="form-group mb-0">
-															<button type="submit" class="btn btn-success  mr-10">Submit</button>
-
-														</div>
-													</form>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
 
     <!-- /Row -->
 </div>

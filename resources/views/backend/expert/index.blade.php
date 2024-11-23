@@ -39,6 +39,11 @@
         <div class="col-sm-12">
             <div class="panel panel-default card-view">
                 <div class="panel-wrapper collapse in">
+
+                @if ('msg')
+                        <div class="alert alert-success">{{session('msg')}}</div>
+                        @endif
+
                     <div class="panel-body">
                         <div class="table-wrap">
                             <div class="table-responsive">
@@ -59,7 +64,13 @@
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>{{$item->name}}</td>
                                                 <td>{{$item->details}}</td>
-                                                <td>Edit | Delete</td>
+                                                <td> <a href="{{route('expert.edit', $item->id)}}" class="btn btn-info">Edit</a>
+
+<form action="{{route('expert.destroy', $item->id)}}" method="post">
+    @csrf
+    @method('DELETE')
+    <button class="btn btn-danger" type="submit" name="submit">Delete</button>
+</form></td>
 
                                             </tr>
 
@@ -70,7 +81,7 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Specialist Name</th>
+                                            <th>Expert Name</th>
                                             <th>Details</th>
                                             <th>Action</th>
 

@@ -22,7 +22,7 @@ class ExpertController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.expert.create');
     }
 
     /**
@@ -30,7 +30,12 @@ class ExpertController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $expert = new Expert;
+        $expert->name = $request->expert;
+        $expert->details= $request->details;
+        $expert->save();
+
+        return redirect()->route('expert.index')->with('msg', "Successfully Created");
     }
 
     /**
@@ -46,7 +51,7 @@ class ExpertController extends Controller
      */
     public function edit(Expert $expert)
     {
-        //
+        return view('backend.expert.edit', compact('expert'));
     }
 
     /**
@@ -54,7 +59,11 @@ class ExpertController extends Controller
      */
     public function update(Request $request, Expert $expert)
     {
-        //
+        $expert->name = $request->expert;
+        $expert->details= $request->details;
+        $expert->update();
+
+        return redirect()->route('expert.index')->with('msg', "Successfully Updated");
     }
 
     /**
@@ -62,6 +71,7 @@ class ExpertController extends Controller
      */
     public function destroy(Expert $expert)
     {
-        //
+        $expert->delete();
+       return redirect()->route('expert.index')->with('msg', 'Deleted Successfully');
     }
 }

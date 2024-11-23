@@ -29,7 +29,7 @@
 							<a href="{{route('expert.index')}}">All Experts</a>
 						</li>
 						<li>
-							<a href="product.html">New Experts</a>
+							<a href="{{route('expert.create')}}">New Experts</a>
 						</li>
 
 
