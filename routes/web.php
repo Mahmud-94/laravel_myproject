@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\backend\ExpertController;
 use App\Http\Controllers\backend\SpecialistController;
 use App\Http\Controllers\ProfileController;
@@ -37,6 +38,7 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::view('/dashboard','backend.admin_dashboard');
     Route::resource('/specialist',SpecialistController::class);
     Route::resource('/expert',ExpertController::class);
+    Route::resource('/agent',AgentController::class);
 
 });
 

@@ -25,17 +25,18 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Expert::factory(50)->create();
 
-        // \App\Models\Admin::create([
-        //     'name' => 'mahmud',
-        //     'email' => 'mahmud@gmail.com',
-        //     'password' => Hash::make('mahmud123'),
-        // ]);
+        \App\Models\Admin::create([
+            'name' => 'mahmud',
+            'email' => 'hassan@gmail.com',
+            'password' => Hash::make('hassan123'),
+        ]);
 
 
-        // \App\Models\Agent::create([
-        //     'name' => 'HASSAN',
-        //     'email' => 'hassan@gmail.com',
-        //     'password' => Hash::make('hassan123'),
-        // ]);
+        \App\Models\Agent::create([
+            'name' => 'HASSAN',
+            'email' => 'hassan@gmail.com',
+            'password' => Hash::make('hassan123'),
+            'expert_id' => '1',
+        ]);
     }
 }

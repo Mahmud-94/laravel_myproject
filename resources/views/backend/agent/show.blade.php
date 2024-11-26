@@ -35,7 +35,8 @@
     <!-- /Title -->
 
     <!-- Row -->
-    {{$expert->name}}
+  <img src="{{asset($agent->photo)}}" alt="">
+     {{$agent->name}}
 
     <!-- /Row -->
 </div>

@@ -36,6 +36,20 @@
 					</ul>
 				</li>
 
+                <li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#aglist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Agents</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="aglist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('agent.index')}}">All Agents</a>
+						</li>
+						<li>
+							<a href="{{route('agent.create')}}">New Agents</a>
+						</li>
+
+
+					</ul>
+				</li>
+
 
 
 

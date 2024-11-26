@@ -43,7 +43,7 @@ class ExpertController extends Controller
      */
     public function show(Expert $expert)
     {
-        //
+        return view('backend.expert.show', compact('expert'));
     }
 
     /**

@@ -17,6 +17,7 @@ class Agent extends Authenticatable
         'name',
         'email',
         'password',
+        'expert_id',
     ];
 
     protected $hidden = [
@@ -27,4 +28,8 @@ class Agent extends Authenticatable
     protected $casts = [
         'password' => 'hashed',
     ];
+
+    public function expert(){
+        return $this->belongsTo(Expert::class);
+    }
 }

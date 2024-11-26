@@ -14,4 +14,8 @@ class Expert extends Model
         'details',
 
     ];
+
+    public function agent(){
+        return $this->hasMany(Agent::class);
+    }
 }

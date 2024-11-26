@@ -51,8 +51,8 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Expert Name</th>
-                                            <th>Details</th>
+                                            <th>Agent Name</th>
+                                            <th>Expert</th>
                                             <th style="width: 30%">Action</th>
                                         </tr>
                                     </thead>
@@ -63,17 +63,16 @@
                                             <tr>
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>{{$item->name}}</td>
-                                                <td>{{$item->details}}</td>
+                                                <td>{{$item->expert->name}}</td>
                                                 <td>
 
-
-                                                    <form action="{{route('expert.destroy', $item->id)}}" method="post">
+                                                        <form action="{{route('agent.destroy', $item->id)}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
 
-                                                        <a href="{{route('expert.show', $item->id)}}"
+                                                        <a href="{{route('agent.show', $item->id)}}"
                                                         class="btn btn-success">Show</a>
-                                                    <a href="{{route('expert.edit', $item->id)}}"
+                                                    <a href="{{route('agent.edit', $item->id)}}"
                                                         class="btn btn-info">Edit</a>
                                                         <button class="btn btn-danger" type="submit"
                                                             name="submit">Delete</button>
@@ -89,9 +88,9 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Expert Name</th>
-                                            <th>Details</th>
-                                            <th style="width: 30%">Action</th>
+                                            <th>Agent Name</th>
+                                            <th>Expert</th>
+                                            <th>Action</th>
 
                                     </tfoot>
 

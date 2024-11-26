@@ -12,6 +12,6 @@ class Specialist extends Model
     protected $fillable = [
         'name',
         'details',
-       
+
     ];
 }
