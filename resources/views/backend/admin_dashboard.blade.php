@@ -25,24 +25,29 @@
 @section('content')
 
 
-            <div class="container pt-25">
-				<!-- Row -->
-
-				<!-- /Row -->
-
+            <div class="container pt-25" >
 				<!-- Row -->
 				<div class="row">
-					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-						<div class="panel panel-default card-view">
+					<div class="col-lg-12">
+                        <div class="panel panel-default card-view">
+							<div class="panel-heading">
+								<h4>Admin Dashboard</h4>
+							</div>
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">
-									<div class="calendar-wrap">
-									  <div id="calendar_small" class="small-calendar"></div>
-									</div>
+									<img src="{{asset('img/welcome3.png')}}" style="width:100%" alt="">
 								</div>
 							</div>
 						</div>
 					</div>
+					
+				</div>
+
+				<!-- /Row -->
+
+				<!-- Row -->
+				<div class="row" >
+				
 					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 						<div class="panel panel-default card-view panel-refresh">
 							<div class="refresh-container">
@@ -50,7 +55,7 @@
 							</div>
 							<div class="panel-heading">
 								<div class="pull-left">
-									<h6 class="panel-title txt-dark">Departmental Patients</h6>
+									<h6 class="panel-title txt-dark">Experts</h6>
 								</div>
 								<div class="pull-right">
 									<a href="#" class="pull-left inline-block refresh mr-15">
@@ -72,7 +77,7 @@
 							</div>
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">
-									<div id="e_chart_3" class="" style="height:346px;"></div>
+									<div id="e_chart_3" class="" style="height:200px;"></div>
 								</div>
 							</div>
 						</div>
@@ -84,7 +89,7 @@
 							</div>
 							<div class="panel-heading">
 								<div class="pull-left">
-									<h6 class="panel-title txt-dark">General Appoinments</h6>
+									<h6 class="panel-title txt-dark">Agents</h6>
 								</div>
 								<div class="pull-right">
 									<a href="#" class="pull-left inline-block refresh mr-15">
@@ -106,7 +111,7 @@
 							</div>
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">
-									<div id="e_chart_2" class="" style="height:346px;"></div>
+									<div id="e_chart_2" class="" style="height:200px;"></div>
 								</div>
 							</div>
 						</div>

@@ -35,51 +35,66 @@
     <!-- /Title -->
 
     <!-- Row -->
-
     <div class="row">
-
-    <div class="col-md-8 col-md-offset-2">
+        <div class="col-sm-12">
             <div class="panel panel-default card-view">
-                <div class="panel-heading">
-                    <div class="pull-left">
-                        <h6 class="panel-title txt-dark">New Experts</h6>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
                 <div class="panel-wrapper collapse in">
+
+                    @if ('msg')
+                        <div class="alert alert-success">{{session('msg')}}</div>
+                    @endif
+
                     <div class="panel-body">
-                        <div class="row">
-                            <div class="col-sm-12 col-xs-12">
-                                <div class="form-wrap">
-                                    <form class="form-horizontal" method="post" action="{{route('expert.store')}}">
-                                        @csrf
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3"
-                                                for="exampleInputuname_2">Experts*</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" name="expert"
-                                                    id="exampleInputuname_2" placeholder="Username">
-                                                <div class="input-group-addon"><i class="icon-user"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3"
-                                                for="exampleInputEmail_2">Details*</label>
-                                            <div class="input-group">
-                                                <textarea type="text" name="details" class="form-control"
-                                                    id="exampleInputEmail_2" placeholder="Enter your Details"
-                                                    rows="10"></textarea>
-                                                <div class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></div>
-                                            </div>
-                                        </div>
+                        <div class="table-wrap">
+                            <div class="table-responsive">
+                                <table id="example" class="table table-hover display  pb-30">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Agent Name</th>
+                                            <th>Expert</th>
+                                            <th style="width: 30%">Action</th>
+                                        </tr>
+                                    </thead>
 
+                                    <tbody>
+                                        @foreach ($items as $item)
 
-                                        <div class="form-group mb-0">
-                                            <button type="submit" class="btn btn-success  mr-10">Submit</button>
+                                            <tr>
+                                                <td>{{$loop->iteration}}</td>
+                                                <td>{{$item->name}}</td>
+                                                <td>{{$item->expert->name}}</td>
+                                                <td>
 
-                                        </div>
-                                    </form>
-                                </div>
+                                                        <form action="{{route('agent.destroy', $item->id)}}" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+
+                                                        <a href="{{route('agent.show', $item->id)}}"
+                                                        class="btn btn-success">Show</a>
+                                                    <a href="{{route('agent.edit', $item->id)}}"
+                                                        class="btn btn-info">Edit</a>
+                                                        <button class="btn btn-danger" type="submit"
+                                                            name="submit">Delete</button>
+                                                    </form>
+                                                </td>
+
+                                            </tr>
+
+                                        @endforeach
+
+                                    </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Agent Name</th>
+                                            <th>Expert</th>
+                                            <th>Action</th>
+
+                                    </tfoot>
+
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -87,8 +102,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- /Row -->
 </div>
 
