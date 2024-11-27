@@ -40,7 +40,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 				<!-- /Row -->
 
@@ -128,7 +128,7 @@
 				</div>
 				<!-- /Row -->
 			</div>
-		
+
 
 @endsection
 

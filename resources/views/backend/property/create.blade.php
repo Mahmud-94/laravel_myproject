@@ -42,7 +42,7 @@
             <div class="panel panel-default card-view">
                 <div class="panel-heading">
                     <div class="pull-left">
-                        <h6 class="panel-title txt-dark">New Agent</h6>
+                        <h6 class="panel-title txt-dark">New Property</h6>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -51,16 +51,16 @@
                         <div class="row">
                             <div class="col-sm-12 col-xs-12">
                                 <div class="form-wrap">
-                                    <form class="form-horizontal" method="post" action="{{route('agent.store')}}" enctype="multipart/form-data">
+                                    <form class="form-horizontal" method="post" action="{{route('property.store')}}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
                                             <label class="control-label col-sm-3"
-                                                for="exampleInputuname_2">Agent name</label>
+                                                for="exampleInputuname_2"> Property title</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="text" class="form-control" name="name" value="{{old('name')}}"
-                                                    id="exampleInputuname_2" placeholder="Username">
+                                                <input type="text" class="form-control" name="title" value="{{old('title')}}"
+                                                    id="exampleInputuname_2" placeholder="title">
 
-                                                @error('name')
+                                                @error('title')
                                                 <div class="alert alert-danger">{{$message}}</div>
                                                 @enderror
 
@@ -69,21 +69,24 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-3"
-                                                for="exampleInputEmail_2">Expert</label>
+                                                for="exampleInputEmail_2">Property type</label>
                                             <di class="input-group" class="col-sm-9">
 
-                                                <select name="expert" id="" class="form-control">
+                                                <select name="ptype" id="" class="form-control">
 
                                                     <option value="">Select one</option>
-                                                    @foreach ($experts as $expert)
 
 
-                                                    <option value="{{$expert->id}}" @selected(old('expert')==$expert->id)>{{$expert->name}}</option>
-                                                    @endforeach
+                                                    <option value="Sell" {{ old('ptype') == 'Sell' ? 'selected' : '' }}>Sell</option>
+                                                    <option value="Rent" {{ old('ptype') == 'Rent' ? 'selected' : '' }}>Rent</option>
+
+
                                                 </select>
 
 
-                                                @error('expert')
+
+
+                                                @error('ptype')
                                                 <div class="alert alert-danger">{{$message}}</>
                                                     @enderror
 
@@ -93,12 +96,26 @@
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3"
-                                                for="exampleInputuname_2">Email</label>
+                                                for="exampleInputuname_2">Bedroom</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="text" class="form-control" name="email" value="{{old('email')}}"
-                                                    id="exampleInputuname_2" placeholder="email">
+                                                <input type="text" class="form-control" name="bedroom" value="{{old('bedroom')}}"
+                                                    id="exampleInputuname_2" placeholder="bedroom">
 
-                                                @error('email')
+                                                @error('bedroom')
+                                                <div class="alert alert-danger">{{$message}}</div>
+                                                @enderror
+
+                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-3"
+                                                for="exampleInputuname_2">bathroom</label>
+                                            <div class="input-group" class="col-sm-9">
+                                                <input type="text" class="form-control" name="bathroom" value="{{old('bathroom')}}"
+                                                    id="exampleInputuname_2" placeholder="bathroom">
+
+                                                @error('bathroom')
                                                 <div class="alert alert-danger">{{$message}}</div>
                                                 @enderror
 
@@ -108,27 +125,76 @@
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3"
-                                                for="exampleInputuname_2">Password</label>
+                                                for="exampleInputuname_2">balcony</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="password" class="form-control" name="password"
-                                                    id="exampleInputuname_2" placeholder="password">
+                                                <input type="text" class="form-control" name="balcony" value="{{old('balcony')}}"
+                                                    id="exampleInputuname_2" placeholder="balcony">
 
-                                                @error('password')
+                                                @error('balcony')
                                                 <div class="alert alert-danger">{{$message}}</div>
                                                 @enderror
 
+                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                            </div>
+                                        </div>
 
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-3"
+                                                for="exampleInputuname_2">kitchen</label>
+                                            <div class="input-group" class="col-sm-9">
+                                                <input type="text" class="form-control" name="kitchen" value="{{old('kitchen')}}"
+                                                    id="exampleInputuname_2" placeholder="kitchen">
+
+                                                @error('kitchen')
+                                                <div class="alert alert-danger">{{$message}}</div>
+                                                @enderror
+
+                                                <div class="input-group-addon"><i class="icon-user"></i></div>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3"
-                                                for="exampleInputuname_2">Confirm Password</label>
+                                                for="exampleInputuname_2">size</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="password" class="form-control" name="password_confirmation"
-                                                    id="exampleInputuname_2" placeholder="Confirm password">
+                                                <input type="text" class="form-control" name="size" value="{{old('size')}}"
+                                                    id="exampleInputuname_2" placeholder="size">
 
+                                                @error('size')
+                                                <div class="alert alert-danger">{{$message}}</div>
+                                                @enderror
 
+                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-3"
+                                                for="exampleInputuname_2">price</label>
+                                            <div class="input-group" class="col-sm-9">
+                                                <input type="text" class="form-control" name="price" value="{{old('price')}}"
+                                                    id="exampleInputuname_2" placeholder="price">
+
+                                                @error('price')
+                                                <div class="alert alert-danger">{{$message}}</div>
+                                                @enderror
+
+                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-3"
+                                                for="exampleInputuname_2">location</label>
+                                            <div class="input-group" class="col-sm-9">
+                                                <input type="text" class="form-control" name="location" value="{{old('location')}}"
+                                                    id="exampleInputuname_2" placeholder="location">
+
+                                                @error('location')
+                                                <div class="alert alert-danger">{{$message}}</div>
+                                                @enderror
 
                                                 <div class="input-group-addon"><i class="icon-user"></i></div>
                                             </div>
@@ -138,25 +204,33 @@
                                             <label class="control-label col-sm-3"
                                                 for="exampleInputuname_2">Photo</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="file" class="form-control" name="password_confirmation" name="photo"
-                                                    id="exampleInputuname_2" placeholder="Confirm password">
+                                                <input type="file" class="form-control" name="photo" value="{{old('photo')}}"
+                                                    id="exampleInputuname_2" placeholder="photo">
 
-
+                                                @error('photo')
+                                                <div class="alert alert-danger">{{$message}}</div>
+                                                @enderror
 
                                                 <div class="input-group-addon"><i class="icon-user"></i></div>
                                             </div>
                                         </div>
 
+
+
+
+
+
+
                                         <div class="form-group">
                                             <label class="control-label col-sm-3">Status</label>
                                             <div class="form-control">
-                                                <input id="radio1" type="radio" name="status" value="active" @if(old('status')=='active' ) checked @endif>
+                                                <input id="radio1" type="radio" name="status" value="available" @if(old('status')=='available' ) checked @endif>
                                                 <label for="radio1">
-                                                    Active
+                                                Available
                                                 </label>
-                                                <input id="radio2" type="radio" name="status" value="inactive" @if(old('status')=='inactive' ) checked @endif>
+                                                <input id="radio2" type="radio" name="status" value="not_available" @if(old('status')=='not_available' ) checked @endif>
                                                 <label for="radio2">
-                                                    Inactive
+                                                Not available
                                                 </label>
                                                 @error('status')
                                                 <div class="alert alert-danger">{{$message}}</div>

@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\backend\BuilderController;
 use App\Http\Controllers\backend\ExpertController;
+use App\Http\Controllers\backend\PropertyController;
 use App\Http\Controllers\backend\SpecialistController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Expert;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -39,6 +42,8 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::resource('/specialist',SpecialistController::class);
     Route::resource('/expert',ExpertController::class);
     Route::resource('/agent',AgentController::class);
+    Route::resource('/property',PropertyController::class);
+    Route::resource('/builder',BuilderController::class);
 
 });
 

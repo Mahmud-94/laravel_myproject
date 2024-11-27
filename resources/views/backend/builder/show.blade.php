@@ -35,9 +35,8 @@
     <!-- /Title -->
 
     <!-- Row -->
-  <img src="{{asset($property->photo)}}" alt="">
-     <h1> {{$property->title}}</h1>
-     <h3>{{$property->ptype}}</h3>
+  <img src="{{asset($builder->photo)}}" alt="">
+     {{$builder->name}}
 
     <!-- /Row -->
 </div>

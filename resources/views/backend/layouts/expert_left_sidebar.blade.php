@@ -54,10 +54,10 @@
 					<a href="javascript:void(0);" data-toggle="collapse" data-target="#bllist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Builders</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
 					<ul id="bllist" class="collapse collapse-level-1">
 						<li>
-							<a href="{{route('agent.index')}}">Builder List</a>
+							<a href="{{route('builder.index')}}">Builder List</a>
 						</li>
 						<li>
-							<a href="{{route('agent.create')}}">New Builder</a>
+							<a href="{{route('builder.create')}}">New Builder</a>
 						</li>
 
 
@@ -69,10 +69,10 @@
 					<a href="javascript:void(0);" data-toggle="collapse" data-target="#prlist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Properties</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
 					<ul id="prlist" class="collapse collapse-level-1">
 						<li>
-							<a href="{{route('agent.index')}}">Property List</a>
+							<a href="{{route('property.index')}}">Property List</a>
 						</li>
 						<li>
-							<a href="{{route('agent.create')}}">Add Property</a>
+							<a href="{{route('property.create')}}">Add Property</a>
 						</li>
 
 

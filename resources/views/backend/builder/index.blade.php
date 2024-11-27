@@ -36,7 +36,7 @@
 
     <!-- Row -->
     <div class="row">
-        <div class="col-xl-12">
+        <div class="col-sm-12">
             <div class="panel panel-default card-view">
                 <div class="panel-wrapper collapse in">
 
@@ -47,54 +47,35 @@
                     <div class="panel-body">
                         <div class="table-wrap">
                             <div class="table-responsive">
-                                <table id="example" class="table table-hover display">
+                                <table id="example" class="table table-hover display  pb-30">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Property title</th>
-                                            <th>Property type</th>
-                                            <th>bedroom</th>
-                                            <th>bathroom</th>
-                                            <th>balcony</th>
-                                            <th>kitchen</th>
-                                            <th>size</th>
-                                            <th>price</th>
-
-                                            <th>location</th>
+                                            <th>Builder Name</th>
+                                            <th>Email</th>
                                             <th>Photo</th>
-
-                                            <th>Status</th>
-
                                             <th style="width: 30%">Action</th>
                                         </tr>
                                     </thead>
-
 
                                     <tbody>
                                         @foreach ($items as $item)
 
                                             <tr>
                                                 <td>{{$loop->iteration}}</td>
-                                                <td>{{$item->title}}</td>
-                                                <td>{{$item->ptype}}</td>
-                                                <td>{{$item->bedroom}}</td>
-                                                <td>{{$item->bathroom}}</td>
-                                                <td>{{$item->balcony}}</td>
-                                                <td>{{$item->kitchen}}</td>
-                                                <td>{{$item->size}}</td>
-                                                <td>{{$item->price}}</td>
-                                                <td>{{$item->location}}</td>
+                                                <td>{{$item->name}}</td>
+                                                <td>{{$item->email}}</td>
                                                 <td>{{$item->photo}}</td>
-                                                <!-- <td>{{$item->status}}</td> -->
                                                 <td>
 
-                                                        <form action="{{route('property.destroy', $item->id)}}" method="post">
+
+                                                    <form action="{{route('builder.destroy', $item->id)}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
 
-                                                        <a href="{{route('property.show', $item->id)}}"
+                                                        <a href="{{route('builder.show', $item->id)}}"
                                                         class="btn btn-success">Show</a>
-                                                    <a href="{{route('property.edit', $item->id)}}"
+                                                    <a href="{{route('builder.edit', $item->id)}}"
                                                         class="btn btn-info">Edit</a>
                                                         <button class="btn btn-danger" type="submit"
                                                             name="submit">Delete</button>
@@ -109,21 +90,9 @@
 
                                     <tfoot>
                                         <tr>
-                                        <th>ID</th>
-                                            <th>Property title</th>
-                                            <th>Property type</th>
-                                            <th>bedroom</th>
-                                            <th>bathroom</th>
-                                            <th>balcony</th>
-                                            <th>kitchen</th>
-                                            <th>size</th>
-                                            <th>price</th>
-
-                                            <th>location</th>
-                                            <th>Photo</th>
-
-                                            <th>Status</th>
-
+                                            <th>ID</th>
+                                            <th>builder Name</th>
+                                            <th>Details</th>
                                             <th style="width: 30%">Action</th>
 
                                     </tfoot>

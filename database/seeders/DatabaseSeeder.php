@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        \App\Models\Expert::factory(50)->create();
+        // \App\Models\Expert::factory(50)->create();
 
         \App\Models\Admin::create([
             'name' => 'mahmud',
