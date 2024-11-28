@@ -75,8 +75,9 @@
 
 
                                         <div class="form-group mb-0">
-                                            <button type="submit" class="btn btn-success  mr-10">Submit</button>
-
+                                            <div class="col-sm-offset-3 col-sm-9">
+                                                <button type="submit" class="btn btn-success ">Submit</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>

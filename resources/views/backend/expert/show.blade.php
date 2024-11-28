@@ -35,7 +35,30 @@
     <!-- /Title -->
 
     <!-- Row -->
-    {{$expert->name}}
+
+    
+
+
+
+
+
+
+<div class="card text-center text-white bg-secondary mb-3">
+
+<h3><p class="card-title"> Expert details :</p> </h3>
+  <img src="{{asset($expert->photo)}}" width="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+  
+    <p class="card-text"><strong>Name :</strong> {{$expert->name}}</p>
+    <p class="card-text"><strong>Details :</strong> {{$expert->details}}</p>
+   =
+    
+
+    <a href="{{route('expert.index')}}" class="btn btn-primary">Back</a>
+  </div>
+
+</div>
+
 
     <!-- /Row -->
 </div>

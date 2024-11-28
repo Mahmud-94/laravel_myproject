@@ -35,11 +35,35 @@
     <!-- /Title -->
 
     <!-- Row -->
-  <img src="{{asset($agent->photo)}}" alt="">
-     {{$agent->name}}
+  
+
+ 
+
+
+<div class="card text-center text-white bg-secondary mb-3">
+
+<h3><p class="card-title"> Agent details :</p> </h3>
+  <img src="{{asset($agent->photo)}}" width="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+  
+    <p class="card-text"><strong>Name :</strong> {{$agent->name}}</p>
+    <p class="card-text"><strong>Email :</strong> {{$agent->email}}</p>
+   
+    
+
+    <a href="{{route('agent.index')}}" class="btn btn-primary">Back</a>
+  </div>
+
+</div>
+
+
+
+
+     
 
     <!-- /Row -->
 </div>
+
 
 
 

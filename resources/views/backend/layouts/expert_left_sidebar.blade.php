@@ -23,7 +23,7 @@
 
 
 				<li>
-					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Experts</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="icon-user mr-20"></i><span class="right-nav-text">Experts</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
 					<ul id="ecom_dr" class="collapse collapse-level-1">
 						<li>
 							<a href="{{route('expert.index')}}">All Experts</a>
@@ -37,7 +37,7 @@
 				</li>
 
                 <li>
-					<a href="javascript:void(0);" data-toggle="collapse" data-target="#aglist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Agents</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#aglist"><div class="pull-left"><i class="glyphicon glyphicon-user mr-20"></i><span class="right-nav-text">Agents</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
 					<ul id="aglist" class="collapse collapse-level-1">
 						<li>
 							<a href="{{route('agent.index')}}">All Agents</a>
@@ -51,7 +51,7 @@
 				</li>
 
 				<li>
-					<a href="javascript:void(0);" data-toggle="collapse" data-target="#bllist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Builders</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#bllist"><div class="pull-left"><i class="icon-user mr-20"></i><span class="right-nav-text">Builders</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
 					<ul id="bllist" class="collapse collapse-level-1">
 						<li>
 							<a href="{{route('builder.index')}}">Builder List</a>
@@ -73,6 +73,48 @@
 						</li>
 						<li>
 							<a href="{{route('property.create')}}">Add Property</a>
+						</li>
+
+
+					</ul>
+				</li>
+
+				<li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#bklist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Booking</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="bklist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('property.index')}}">Booking List</a>
+						</li>
+						<li>
+							<a href="{{route('property.create')}}">Manage Booking</a>
+						</li>
+
+
+					</ul>
+				</li>
+
+				<li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#trlist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Transaction</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="trlist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('property.index')}}">Transaction List</a>
+						</li>
+						<li>
+							<a href="{{route('property.create')}}">Manage Transaction</a>
+						</li>
+
+
+					</ul>
+				</li>
+
+				<li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#fdlist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Feedback</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="fdlist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('property.index')}}">Feedback List</a>
+						</li>
+						<li>
+							<a href="{{route('property.create')}}">Manage Feedback</a>
 						</li>
 
 

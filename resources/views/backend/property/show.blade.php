@@ -35,9 +35,46 @@
     <!-- /Title -->
 
     <!-- Row -->
-  <img src="{{asset($property->photo)}}" alt="">
-     <h1> {{$property->title}}</h1>
-     <h3>{{$property->ptype}}</h3>
+
+    <!-- <h3></h3>
+     <img src="{{asset($property->photo)}}" width="300px">
+
+
+<div class="col-sm-3"><h2>Property Title : {{$property->title}}</h2></div>
+<h4>Property Type : {{$property->ptype}}</h4>
+<h5>Bedroom : {{$property->bedroom}}</h5>
+<h5>Bathroom : {{$property->bathroom}}</h5>
+<h5>Balcony : {{$property->balcony}}</h5>
+<h5>Kitchen : {{$property->kitchen}}</h5>
+<h5>Property Size : {{$property->size}}</h5>
+<h5>Property Price : {{$property->price}}</h5>
+<h5>Property Location : {{$property->location}}</h5>
+<h5>Property Status : {{$property->status}}</h5> -->
+
+<div class="card text-center text-white bg-secondary mb-3">
+
+<h4>Property Title:<p class="card-title"> {{$property->title}}</p> </h4>
+  <img src="{{asset($property->photo)}}" width="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+  
+    <p class="card-text"><strong>Property Type :</strong> {{$property->ptype}}</p>
+    <p class="card-text"><strong>Bedroom :</strong> {{$property->bedroom}}</p>
+    <p class="card-text"><strong>Bathroom :</strong> {{$property->bathroom}}</p>
+    <p class="card-text"><strong>Balcony :</strong> {{$property->balcony}}</p>
+    <p class="card-text"><strong>Kitchen :</strong> {{$property->kitchen}}</p>
+    <p class="card-text"><strong>Property Size :</strong> {{$property->size}}</p>
+    <p class="card-text"><strong>Property Price :</strong> {{$property->price}}</p>
+    <p class="card-text"><strong>Property Location :</strong> {{$property->location}}</p>
+    <p class="card-text"><strong>Property Status :</strong> {{$property->status}}</p>
+
+    <a href="{{route('property.index')}}" class="btn btn-primary">Back</a>
+  </div>
+
+</div>
+
+
+
+
 
     <!-- /Row -->
 </div>

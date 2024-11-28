@@ -138,7 +138,7 @@
                                             <label class="control-label col-sm-3"
                                                 for="exampleInputuname_2">Photo</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="file" class="form-control" name="password_confirmation" name="photo"
+                                                <input type="file" class="form-control"  name="photo"
                                                     id="exampleInputuname_2" placeholder="Confirm password">
 
 

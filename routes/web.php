@@ -61,6 +61,7 @@ Route::middleware('auth:agent')->prefix('agent')->group( function () {
     Route::post('logout', [App\Http\Controllers\Auth\Agent\LoginController::class, 'logout'])->name('agent.logout');
 
     Route::view('/dashboard','backend.agent_dashboard');
+   
 
 });
 

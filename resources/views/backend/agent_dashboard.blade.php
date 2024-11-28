@@ -31,7 +31,7 @@
 					<div class="col-lg-12">
                         <div class="panel panel-default card-view">
 							<div class="panel-heading">
-								<h4>Admin Dashboard</h4>
+								<h4>Agent Dashboard</h4>
 							</div>
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">

@@ -35,8 +35,30 @@
     <!-- /Title -->
 
     <!-- Row -->
-  <img src="{{asset($builder->photo)}}" alt="">
-     {{$builder->name}}
+    
+
+
+
+<div class="card text-center text-white bg-secondary mb-3">
+
+<h3><p class="card-title"> Builder details :</p> </h3>
+  <img src="{{asset($builder->photo)}}" width="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+  
+    <p class="card-text"><strong>Name :</strong> {{$builder->name}}</p>
+    <p class="card-text"><strong>Email :</strong> {{$builder->email}}</p>
+   
+    
+
+    <a href="{{route('builder.index')}}" class="btn btn-primary">Back</a>
+  </div>
+
+</div>
+
+
+
+  
+     
 
     <!-- /Row -->
 </div>

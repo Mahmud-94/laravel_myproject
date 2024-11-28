@@ -65,7 +65,7 @@
 
                                             <th>Status</th>
 
-                                            <th style="width: 30%">Action</th>
+                                            <th style="width: 25%">Action</th>
                                         </tr>
                                     </thead>
 
@@ -124,7 +124,7 @@
 
                                             <th>Status</th>
 
-                                            <th style="width: 30%">Action</th>
+                                            <th>Action</th>
 
                                     </tfoot>
 

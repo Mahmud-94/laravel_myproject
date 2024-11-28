@@ -55,7 +55,7 @@
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
-                                    <label class="control-label"
+                                    <label class="control-label col-sm-3"
                                         for="exampleInputuname_2">Builder name</label>
                                     <div class="input-group" class="col-sm-9">
                                         <input type="text" class="form-control" name="name" value="{{old('name')?? $builder->name}}"
@@ -71,7 +71,7 @@
 
 
                                 <div class="form-group">
-                                    <label class="control-label"
+                                    <label class="control-label col-sm-3"
                                         for="exampleInputuname_2">Email</label>
                                     <div class="input-group" class="col-sm-9">
                                         <input type="text" class="form-control" name="email" value="{{old('email')??$builder->email}}"
@@ -88,7 +88,7 @@
 
 
                                 <div class="form-group">
-                                    <label class="control-label"
+                                    <label class="control-label col-sm-3"
                                         for="exampleInputuname_2">Photo</label>
                                     <div class="input-group" class="col-sm-9">
                                         <input type="file" class="form-control" name="password_confirmation"  name="photo"

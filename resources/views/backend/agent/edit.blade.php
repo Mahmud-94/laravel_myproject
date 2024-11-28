@@ -55,7 +55,7 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-                                            <label class="control-label"
+                                            <label class="control-label col-sm-3"
                                                 for="exampleInputuname_2">Agent name</label>
                                             <div class="input-group" class="col-sm-9">
                                                 <input type="text" class="form-control" name="name" value="{{old('name')?? $agent->name}}"
@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label"
+                                            <label class="control-label col-sm-3"
                                                 for="exampleInputEmail_2">Expert</label>
                                             <di class="input-group" class="col-sm-9">
 
@@ -94,7 +94,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label"
+                                            <label class="control-label col-sm-3"
                                                 for="exampleInputuname_2">Email</label>
                                             <div class="input-group" class="col-sm-9">
                                                 <input type="text" class="form-control" name="email" value="{{old('email')??$agent->email}}"
@@ -111,7 +111,7 @@
 
 
                                         <div class="form-group">
-                                            <label class="control-label"
+                                            <label class="control-label col-sm-3"
                                                 for="exampleInputuname_2">Photo</label>
                                             <div class="input-group" class="col-sm-9">
                                                 <input type="file" class="form-control" name="password_confirmation"  name="photo"
