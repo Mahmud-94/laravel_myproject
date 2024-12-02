@@ -122,6 +122,36 @@
 				</li>
 
 
+                <li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#bknlist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Booking</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="bknlist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('booking.index')}}">Booking List</a>
+						</li>
+						<li>
+							<a href="{{route('booking.create')}}">Manage Booking</a>
+						</li>
+
+
+					</ul>
+				</li>
+
+
+                <li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#sclist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Sector</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="sclist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('sector.index')}}">Sector List</a>
+						</li>
+						<li>
+							<a href="{{route('sector.create')}}">Manage Sector</a>
+						</li>
+
+
+					</ul>
+				</li>
+
+
 
 
 

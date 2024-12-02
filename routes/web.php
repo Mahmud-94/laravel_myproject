@@ -4,17 +4,39 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\backend\BuilderController;
 use App\Http\Controllers\backend\ExpertController;
 use App\Http\Controllers\backend\PropertyController;
+use App\Http\Controllers\backend\SectorController;
 use App\Http\Controllers\backend\SpecialistController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\backend\BookingController as BackendBookingController;
 use App\Models\Expert;
 use Illuminate\Support\Facades\Route;
 
 
 
+// Frontend
+// Route::get('/', function () {
+//     return view('frontend.home');
+// });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/about', function () {
+//     return view('frontend.about');
+// });
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::view('/about', 'frontend.about')->name('about');
+
+
+Route::get('/booking', [BookingController::class, 'create'])->name('front_app.create');
+Route::post('/booking', [BookingController::class, 'store'])->name('front_app.store');
+
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -44,6 +66,9 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::resource('/agent',AgentController::class);
     Route::resource('/property',PropertyController::class);
     Route::resource('/builder',BuilderController::class);
+    Route::resource('/booking',BackendBookingController::class);
+    Route::get('/booking/status/{id}',[BackendBookingController::class, 'changeStatus'])->name('changeStatus');
+    Route::resource('/sector',SectorController::class);
 
 });
 
@@ -61,7 +86,7 @@ Route::middleware('auth:agent')->prefix('agent')->group( function () {
     Route::post('logout', [App\Http\Controllers\Auth\Agent\LoginController::class, 'logout'])->name('agent.logout');
 
     Route::view('/dashboard','backend.agent_dashboard');
-   
+
 
 });
 

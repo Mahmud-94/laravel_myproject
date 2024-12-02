@@ -31,4 +31,9 @@ class Agent extends Authenticatable
     public function expert(){
         return $this->belongsTo(Expert::class);
     }
+
+    public function booking(){
+        return $this->belongsTo(Booking::class);
+    }
 }
+
