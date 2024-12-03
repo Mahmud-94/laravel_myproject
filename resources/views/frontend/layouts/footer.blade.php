@@ -53,7 +53,7 @@
                         <div class="rr-footer-list">
                            <ul>
                               <li><a href="service.html">Residents</a></li>
-                              <li><a href="service.html">Medical</a></li>
+                              <li><a href="service.html">Real Estate</a></li>
                               <li><a href="service.html">Online Service</a></li>
                               <li><a href="service.html">Visiting</a></li>
                               <li><a href="service.html">Employment</a></li>

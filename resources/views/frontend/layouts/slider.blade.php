@@ -28,10 +28,10 @@
                                  <div class="rr-slider-2-content z-index-2">
                                     <div class="rr-slider-2-title-box pb-25">
                                        <h4 class="rr-slider-2-subtitle"><img src="assets/img/slider/subtitle-shape.png"
-                                             alt="img"> Medical Services !</h4>
+                                             alt="img"> Real Estate Services !</h4>
                                        <h1 class="rr-slider-2-title">Smart Qualified Staff <br />
                                           Trusty & Health.</h1>
-                                       <p>Medical tailored it design, management & support services<br />
+                                       <p>Real Estate tailored it design, management & support services<br />
                                           business agency elit, sed do eiusmod tempor. </p>
                                     </div>
                                     <div class="rr-slider-2-info  d-flex align-items-center p-relative">

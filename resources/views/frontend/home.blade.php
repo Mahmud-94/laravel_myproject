@@ -13,16 +13,16 @@
 
 @section('content')
 
-<div class="rr-agents-area  pb-80">
+<div class="rr-doctors-area  pb-80">
          <div class="container">
             <div class="row">
                <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                  <div class="rr-agents-title-box text-center mb-45">
-                     <div class="rr-agents-title-box z-index-2">
+                  <div class="rr-doctors-title-box text-center mb-45">
+                     <div class="rr-doctors-title-box z-index-2">
                         <span class="rr-section-subtitle p-relative"><img src="assets/img/testimonial/section-icon.png"
                               alt="img"> Our Best agents <img src="assets/img/testimonial/section-icon.png"
                               alt="img"></span>
-                        <h4 class="rr-section-title">Experts in Range Medical Services</h4>
+                        <h4 class="rr-section-title">Experts in Range Real Estate Services</h4>
                      </div>
                   </div>
                </div>
@@ -33,15 +33,15 @@
 
 
                <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                  <div class="rr-agents-item mb-25 d-flex align-items-center justify-content-center">
-                     <div class="rr-agents-img">
-                        <img src="{{asset($agent->photo)}}" alt="">
+                  <div class="rr-doctors-item mb-25 d-flex align-items-center justify-content-center">
+                     <div class="rr-doctors-img">
+                        <img src="{{asset($agent->photo)}}" alt="" style="width: 360px; height: 268px;">
                      </div>
-                     <div class="rr-agents-content">
-                        <h4 class="rr-agents-name"><a href="agent-details.html">{{$agent->name}}</a></h4>
+                     <div class="rr-doctors-content">
+                        <h4 class="rr-doctors-name"><a href="doctor-details.html">{{$agent->name}}</a></h4>
                         <span>{{$agent->expert->name}}</span>
                         <p>Efficiently myocardinate market-driven innovation via open-source alignments. </p>
-                        <a class="rr-agents-button" href="agent-details.html">Book an Booking </a>
+                        <a class="rr-doctors-button" href="doctor-details.html">Book a Booking </a>
                      </div>
                   </div>
                </div>
@@ -51,17 +51,13 @@
             </div>
             <div class="row">
                <div class="col-xl-12 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                  <div class="rr-agents-btn text-center">
+                  <div class="rr-doctors-btn text-center">
                      <a class="rr-btn-black" href="agents.html"><span>View all agents <i class="fa-sharp fa-solid fa-plus"></i></span></a>
                   </div>
                </div>
             </div>
          </div>
       </div>
-
-
-
-
 
 
       <!-- service area start -->
@@ -97,9 +93,9 @@
                            </div>
                            <div class="rr-service-info ml-80">
                               <h3 class="rr-service-title"><a href="service-details.html">{{$item->name}}</a></h3>
-                              <span><i class="fa-solid fa-check"></i> <a href="service-details.html">Medicine & Health</a></span>
+                              <span><i class="fa-solid fa-check"></i> <a href="service-details.html">Property Sell</a></span>
                            </div>
-                           <p>Medical is the knowledge or master event
+                           <p>Real Estate is the knowledge or master event
                               dentify the error of the we website
                               best coding page speed.</p>
                            <div class="rr-service-right-icon text-end">

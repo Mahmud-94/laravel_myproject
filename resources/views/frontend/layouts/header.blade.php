@@ -32,8 +32,8 @@
                                  <li><a href="pricing.html">pricing </a></li>
                                  <li><a href="project.html">project</a></li>
                                  <li><a href="project-details.html">project-details</a></li>
-                                 <li><a href="doctors.html">doctors</a></li>
-                                 <li><a href="doctor-details.html">doctors-details</a></li>
+                                 <li><a href="agents.html">Agents</a></li>
+                                 <li><a href="agent-details.html">Agents-details</a></li>
                                  <li><a href="404.html">error</a></li>
                               </ul>
                            </li>
@@ -56,7 +56,7 @@
                         <button class="search-open-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                      </div>
                      <div class="rr-header-btn d-none d-md-block">
-                        <a class="rr-btn rr-header-spc" href="{{route('front_app.create')}}"><span>Make Appointment <i
+                        <a class="rr-btn rr-header-spc" href="{{route('front_app.create')}}"><span>Property Booking <i
                                  class="fa-sharp fa-solid fa-plus"></i></span></a>
                      </div>
                      <div class="rr-header-bar d-xl-none">

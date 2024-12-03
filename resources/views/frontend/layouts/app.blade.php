@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="utf-8">
-   <title>Mekina - Medical & Health HTML5 Template</title>
+   <title>Mekina - Real Estate HTML5 Template</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
