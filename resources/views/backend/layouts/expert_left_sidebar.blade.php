@@ -151,6 +151,39 @@
 					</ul>
 				</li>
 
+                <li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#cntlist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Client</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="cntlist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('client.index')}}">client List</a>
+						</li>
+						<li>
+							<a href="{{route('client.create')}}">Manage client</a>
+
+
+						</li>
+
+
+					</ul>
+				</li>
+
+
+                <li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#cnlist"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">Contact</span></div><div class="pull-right"><span class="label label-gold">#</span></div><div class="clearfix"></div></a>
+					<ul id="cnlist" class="collapse collapse-level-1">
+						<li>
+							<a href="{{route('contact.index')}}">Contact List</a>
+						</li>
+						<li>
+							<a href="{{route('contact.create')}}">Manage Contact</a>
+
+
+						</li>
+
+
+					</ul>
+				</li>
+
 
 
 

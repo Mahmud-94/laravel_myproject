@@ -51,8 +51,10 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Agent Name</th>
-                                            <th>Expert</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Messages</th>
                                             <th style="width: 30%">Action</th>
                                         </tr>
                                     </thead>
@@ -63,16 +65,19 @@
                                             <tr>
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>{{$item->name}}</td>
-                                                <td>{{$item->expert->name}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td>{{$item->phone}}</td>
+                                                <td>{{$item->message}}</td>
                                                 <td>
 
-                                                        <form action="{{route('agent.destroy', $item->id)}}" method="post">
+
+                                                    <form action="{{route('contact.destroy', $item->id)}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
 
-                                                        <a href="{{route('agent.show', $item->id)}}"
+                                                        <a href="{{route('contact.show', $item->id)}}"
                                                         class="btn btn-success">Show</a>
-                                                    <a href="{{route('agent.edit', $item->id)}}"
+                                                    <a href="{{route('contact.edit', $item->id)}}"
                                                         class="btn btn-info">Edit</a>
                                                         <button class="btn btn-danger" type="submit"
                                                             name="submit">Delete</button>
@@ -87,11 +92,12 @@
 
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Agent Name</th>
-                                            <th>Expert</th>
-                                            <th>Action</th>
-                                        </tr>
+                                        <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Messages</th>
+                                            <th style="width: 30%">Action</th>
 
                                     </tfoot>
 

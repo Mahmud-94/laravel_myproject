@@ -38,27 +38,28 @@
 
     <div class="row">
 
-        <div class="col-md-6">
-            <div class="panel panel-default card-view">
-                <div class="panel-heading">
-                    <div class="pull-left">
-                        <h6 class="panel-title txt-dark">New Agent</h6>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="panel-wrapper collapse in">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-sm-12 col-xs-12">
-                                <div class="form-wrap">
-                                <form class="form-horizontal" method="post" action="{{route('agent.update', $agent->id)}}" enctype="multipart/form-data">
-                                        @csrf
-                                        @method('PUT')
-                                        <div class="form-group">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+									<div class="pull-left">
+										<h6 class="panel-title txt-dark">New contacts</h6>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-sm-12 col-xs-12">
+												<div class="form-wrap">
+                                                <form class="form-horizontal" method="post" action="{{route('contact.update', $contact->id)}}">
+                                                        @csrf
+                                                        @method('PUT')
+
+                                                        <div class="form-group">
                                             <label class="control-label col-sm-3"
-                                                for="exampleInputuname_2">Agent name</label>
+                                                for="exampleInputuname_2">Name</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="text" class="form-control" name="name" value="{{old('name')?? $agent->name}}"
+                                                <input type="text" class="form-control" name="name" value="{{old('name')?? $contact->name}}"
                                                     id="exampleInputuname_2" placeholder="Username">
 
                                                     @error('name')
@@ -68,36 +69,13 @@
                                                 <div class="input-group-addon"><i class="icon-user"></i></div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3"
-                                                for="exampleInputEmail_2">Expert</label>
-                                            <di class="input-group" class="col-sm-9">
 
-                                            <select name="expert" id="" class="form-control">
-
-                                                    <option value="">Select one</option>
-                                                    @foreach($experts as $expert)
-													<option value="{{$expert->id}}" @if(old('expert')==$expert->id) selected
-													@elseif($agent->expert_id == $expert->id)
-													  selected
-													@endif >{{$expert->name}}</option>
-													@endforeach
-                                            </select>
-
-
-                                                                      @error('expert')
-                                                                                 <div class="alert alert-danger">{{$message}}</>
-                                                                        @enderror
-
-                                                <div class="input-group-addon"><i class="icon-envelope-open"></i></div>
-                                            </di>
-                                        </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3"
                                                 for="exampleInputuname_2">Email</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="text" class="form-control" name="email" value="{{old('email')??$agent->email}}"
+                                                <input type="text" class="form-control" name="email" value="{{old('email')??$contact->email}}"
                                                     id="exampleInputuname_2" placeholder="email">
 
                                                     @error('email')
@@ -112,61 +90,48 @@
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3"
-                                                for="exampleInputuname_2">Photo</label>
+                                                for="exampleInputuname_2">Phone</label>
                                             <div class="input-group" class="col-sm-9">
-                                                <input type="file" class="form-control"  name="photo"
-                                                    id="exampleInputuname_2" placeholder="Confirm password">
+                                                <input type="text" class="form-control" name="phone" value="{{old('phone')??$contact->phone}}"
+                                                    id="exampleInputuname_2" placeholder="Phone number">
 
+                                                    @error('phone')
+													<div class="alert alert-danger">{{$message}}</div>
+													@enderror
 
-
-                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                               <div class="input-group-addon"><i class="icon-user"></i></div>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-											<label class="control-label col-sm-3">Status</label>
-											<div class="form-control">
+                                            <label class="control-label col-sm-3"
+                                                for="exampleInputuname_2">Message</label>
+                                            <div class="input-group" class="col-sm-9">
+                                                <input type="text" class="form-control" name="message" value="{{old('message')??$contact->message}}"
+                                                    id="exampleInputuname_2" placeholder="message">
 
+                                                    @error('message')
+													<div class="alert alert-danger">{{$message}}</div>
+													@enderror
 
-                                            <input id="radio1" type="radio" name="status" value="active" @if(old('status')=='active' ) checked
-												@elseif($agent->status == 'active')
-												 checked
-												@endif>
-												<label for="radio1">
-													Active
-												</label>
-
-
-												<input id="radio2" type="radio" name="status" value="inactive" @if(old('status')=='inactive' ) checked
-												@elseif($agent->status == 'inactive')
-												 checked
-												@endif>
-												<label for="radio2">
-													Inactive
-												</label>
-
-
-												@error('status')
-												<div class="alert alert-danger">{{$message}}</div>
-												@enderror
-											</div>
-
-										</div>
+                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                            </div>
+                                        </div>
 
 
                                         <div class="form-group mb-0">
                                             <button type="submit" class="btn btn-success  mr-10">Update</button>
 
                                         </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 
     <!-- /Row -->

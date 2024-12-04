@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\backend\BuilderController;
+use App\Http\Controllers\backend\ClientController;
+use App\Http\Controllers\backend\ContactController;
 use App\Http\Controllers\backend\ExpertController;
 use App\Http\Controllers\backend\PropertyController;
 use App\Http\Controllers\backend\SectorController;
@@ -69,6 +71,8 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::resource('/booking',BackendBookingController::class);
     Route::get('/booking/status/{id}',[BackendBookingController::class, 'changeStatus'])->name('changeStatus');
     Route::resource('/sector',SectorController::class);
+    Route::resource('/client',ClientController::class);
+    Route::resource('/contact',ContactController::class);
 
 });
 
