@@ -91,6 +91,26 @@ Route::middleware('auth:agent')->prefix('agent')->group( function () {
 
     Route::view('/dashboard','backend.agent_dashboard');
 
+});
+
+
+
+Route::middleware('guest:client')->prefix('client')->group( function () {
+
+    Route::get('login', [App\Http\Controllers\Auth\Client\LoginController::class, 'login'])->name('client.login');
+
+    Route::post('login', [App\Http\Controllers\Auth\Client\LoginController::class, 'check_user']);
+
+    Route::get('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'register'])->name('client.register');
+    Route::post('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'check_user']);
+
+});
+
+Route::middleware('auth:client')->prefix('client')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Client\LoginController::class, 'destroy'])->name('client.logout');
+
+    Route::view('/home','frontend.home');
 
 });
 

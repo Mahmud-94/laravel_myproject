@@ -38,9 +38,7 @@ class ClientController extends Controller
                 'password'=>'required | min:8 | confirmed ',
                 'photo'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
-            ],
-
-        );
+            ],);
 
         if ($image = $request->file('photo')) {
             $destinationPath = 'img/';
