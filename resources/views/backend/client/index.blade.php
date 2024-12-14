@@ -65,7 +65,7 @@
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>{{$item->name}}</td>
                                                 <td>{{$item->email}}</td>
-                                                <td>{{asset($item->photo)}}</td>
+                                                <td><img src="{{asset($item->photo)}}" width="100px" alt=""></td>
 
                                                 <td>
 
