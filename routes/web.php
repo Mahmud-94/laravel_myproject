@@ -101,14 +101,34 @@ Route::middleware('guest:client')->prefix('client')->group( function () {
 
     Route::post('login', [App\Http\Controllers\Auth\Client\LoginController::class, 'check_user']);
 
-    Route::get('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'register'])->name('client.register');
-    Route::post('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'check_user']);
+    Route::get('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'create'])->name('client.register');
+    Route::post('register', [App\Http\Controllers\Auth\Client\RegisterController::class, 'store']);
 
 });
 
 Route::middleware('auth:client')->prefix('client')->group( function () {
 
     Route::post('logout', [App\Http\Controllers\Auth\Client\LoginController::class, 'destroy'])->name('client.logout');
+
+    Route::view('/dashboard','frontend.dashboard');
+
+});
+
+
+Route::middleware('guest:customer')->prefix('customer')->group( function () {
+
+    Route::get('login', [App\Http\Controllers\Auth\Customer\LoginController::class, 'login'])->name('customer.login');
+
+    Route::post('login', [App\Http\Controllers\Auth\Customer\LoginController::class, 'check_user']);
+
+    Route::get('register', [App\Http\Controllers\Auth\Customer\RegisterController::class, 'create'])->name('customer.register');
+    Route::post('register', [App\Http\Controllers\Auth\Customer\RegisterController::class, 'store']);
+
+});
+
+Route::middleware('auth:customer')->prefix('customer')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Customer\LoginController::class, 'destroy'])->name('customer.logout');
 
     Route::view('/home','frontend.home');
 

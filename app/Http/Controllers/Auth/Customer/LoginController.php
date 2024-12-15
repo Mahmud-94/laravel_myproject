@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth\Client;
+namespace App\Http\Controllers\Auth\Customer;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
@@ -14,7 +14,7 @@ class LoginController extends Controller
 {
     public function login(): View
     {
-        return view('frontend.auth.client_login');
+        return view('frontend.auth.customer_login');
     }
 
     public function check_user(Request $request): RedirectResponse
@@ -24,7 +24,7 @@ class LoginController extends Controller
             'password' => ['required', 'string'],
         ]);
 
-        if(! Auth::guard('client')->attempt($request->only('email', 'password'), $request->boolean('remember')))
+        if(! Auth::guard('customer')->attempt($request->only('email', 'password'), $request->boolean('remember')))
         {
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed'),
@@ -38,12 +38,12 @@ class LoginController extends Controller
 
     public function destroy(Request $request): RedirectResponse
     {
-        Auth::guard('client')->logout();
+        Auth::guard('customer')->logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return redirect('/client/login');
+        return redirect('/customer/login');
     }
 }

@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Auth\Client;
+namespace App\Http\Controllers\Auth\Customer;
 
-use App\Models\Client;
+use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
 
-use App\Http\Controllers\Controller;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
@@ -16,26 +17,24 @@ class RegisterController extends Controller
 {
     public function create(): View
     {
-        return view('frontend.auth.client_register');
+        return view('frontend.auth.customer_register');
     }
 
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:100'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:50', 'unique:'.Client::class],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.Customer::class],
             'password' => ['required', 'confirmed', 'min:8'],
-            'phone' => ['required', 'string', 'max:50'],
         ]);
 
-        $client = Client::create([
+        $customer = Customer::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'phone' => $request->phone,
         ]);
 
-        Auth::guard('client')->login($client);
+        Auth::guard('customer')->login($customer);
 
         return redirect(RouteServiceProvider::HOME);
     }

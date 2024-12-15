@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('breadcome')
+@section('bredcrumb')
 
 <div class="breadcrumb__area breadcrumb__overlay breadcrumb__height fix p-relative"
          data-background="assets/img/breadcurmb/breadcurmb-1-10.jpg">
