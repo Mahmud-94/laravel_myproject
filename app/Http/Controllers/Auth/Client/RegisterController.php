@@ -35,8 +35,11 @@ class RegisterController extends Controller
             'phone' => $request->phone,
         ]);
 
-        Auth::guard('client')->login($client);
+        // Auth::guard('client')->login($client);
 
-        return redirect(RouteServiceProvider::HOME);
+        // return redirect(RouteServiceProvider::HOME);
+
+
+        return redirect()->route('client.login');
     }
 }

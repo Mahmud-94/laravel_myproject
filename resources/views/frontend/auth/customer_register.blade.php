@@ -35,11 +35,6 @@
                                                         placeholder="Enter Confirm Password">
                                                 </div>
 
-                                                <div class="form-group mb-3">
-                                                    <label for="phone" class="form-label">phone</label>
-                                                    <input class="form-control" name="phone" type="text"
-                                                        id="username" placeholder="Enter your phone">
-                                                </div>
 
 
                                                 <div class="form-group d-flex mb-3">

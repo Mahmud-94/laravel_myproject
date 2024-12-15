@@ -31,14 +31,13 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', 'frontend.about')->name('about');
 
 
-Route::get('/booking', [BookingController::class, 'create'])->name('front_app.create');
-Route::post('/booking', [BookingController::class, 'store'])->name('front_app.store');
 
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -129,6 +128,9 @@ Route::middleware('guest:customer')->prefix('customer')->group( function () {
 Route::middleware('auth:customer')->prefix('customer')->group( function () {
 
     Route::post('logout', [App\Http\Controllers\Auth\Customer\LoginController::class, 'destroy'])->name('customer.logout');
+    
+    Route::get('/booking', [BookingController::class, 'create'])->name('front_app.create');
+Route::post('/booking', [BookingController::class, 'store'])->name('front_app.store');
 
     Route::view('/home','frontend.home');
 

@@ -10,6 +10,8 @@
     <meta name="author" content="Zoyothemes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
@@ -26,8 +28,9 @@
     <div class="account-page">
         <div class="container-fluid p-0">
             <div class="row align-items-center g-0">
+                
 
-                <div class="col-xl-5">
+                <div class="col-xl-7">
                     <div class="row">
                         <div class="col-md-8 mx-auto">
                             <div class="card p-3">
@@ -43,7 +46,7 @@
 
                                         <div class="auth-title-section mb-3 text-center">
                                             <h3 class="text-dark fs-20 fw-medium mb-2">Welcome back</h3>
-                                            <p class="text-dark text-capitalize fs-14 mb-0">Customer Registration Form</p>
+                                            <p class="text-dark text-capitalize fs-14 mb-0">Client Registration Form</p>
                                             @if ($errors->has('email'))
                                                 <div class="alert alert-danger">{{ $errors->first('email') }}</div>
                                             @endif
@@ -163,11 +166,11 @@
                     </div>
                 </div>
 
-                <div class="col-xl-7">
-                    <div class="account-page-bg p-md-5 p-4">
+                <div class="col-xl-5">
+                    <div class="account-page-bg p-md-8 p-2">
                         <div class="text-center">
                             <div class="auth-image">
-                                <img src="{{ asset('assets/images/auth-images.svg') }}" class="mx-auto img-fluid"
+                                <img src="{{ asset('assets/img/login.jpg') }}" class="mx-auto img-fluid"
                                     alt="images">
                             </div>
                         </div>

@@ -23,8 +23,8 @@ class RegisterController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.Customer::class],
+            'name' => ['required', 'string', 'max:100'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:50', 'unique:'.Customer::class],
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
@@ -34,8 +34,9 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        Auth::guard('customer')->login($customer);
+        // Auth::guard('customer')->login($customer);
 
-        return redirect(RouteServiceProvider::HOME);
+        // return redirect(RouteServiceProvider::HOME);
+        return redirect()->route('customer.login');
     }
 }

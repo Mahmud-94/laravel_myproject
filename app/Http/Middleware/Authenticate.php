@@ -15,7 +15,8 @@ class Authenticate extends Middleware
 
     protected function redirectTo(Request $request): ?string
     {
-        return redirect()->route('login');
+       // return redirect()->route('login');
+       return redirect()->route('customer.login');
     }
 
 

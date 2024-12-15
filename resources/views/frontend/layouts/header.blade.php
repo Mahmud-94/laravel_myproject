@@ -8,7 +8,7 @@
                      <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="img"></a>
                   </div>
                </div>
-               <div class="col-xl-7 d-none d-xl-block">
+               <div class="col-xl-6 d-none d-xl-block">
                   <div class="rr-header-main-menu">
                      <nav class="rr-main-menu-content text-end">
                         <ul>
@@ -50,15 +50,38 @@
                      </nav>
                   </div>
                </div>
-               <div class="col-xl-3 col-lg-8 col-6">
+               <div class="col-xl-4 col-lg-6 col-4">
                   <div class="rr-header-right d-flex align-items-center justify-content-end ">
-                     <div class="rr-header-2-icon d-none d-xl-block mr-15">
-                        <button class="search-open-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                     </div>
+
+                  <form action="{{route('client.login')}}" method="get">
+									@csrf
+                          
+
+									<button type="submit" class="btn btn-sm btn-primary ">Login</button>
+
+								</form>
+                        <form action="{{route('client.register')}}" method="get">
+									@csrf
+                          
+
+									<button type="submit" class="btn btn-sm btn-success ">Register</button>
+
+								</form>
+                        &nbsp;
+                     
                      <div class="rr-header-btn d-none d-md-block">
                         <a class="rr-btn rr-header-spc" href="{{route('front_app.create')}}"><span>Property Booking <i
                                  class="fa-sharp fa-solid fa-plus"></i></span></a>
                      </div>
+                     &nbsp;
+
+                     <form action="{{route('client.logout')}}" method="post">
+									@csrf
+                          
+
+									<button type="submit" class="btn btn-sm btn-danger "> <i class="fa fa-fw fa-power-off"></i> Logout</button>
+
+								</form>
                      <div class="rr-header-bar d-xl-none">
                         <button class="rr-menu-bar"><i class="fa-solid fa-bars"></i></button>
                      </div>
